@@ -2,7 +2,7 @@ import { get } from "http";
 import { CronJob } from "cron";
 
 const pingGoogle = () => {
-  get("https://akm-api.vviia.repl.co/api/v1/", (res) => {
+  get("http://akm-api.vviia.repl.co/api/v1/", (res) => {
     console.log(`Ping successful at ${new Date()}`);
   }).on("error", (err) => {
     console.log(`Ping failed with error: ${err}`);
