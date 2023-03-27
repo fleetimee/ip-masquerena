@@ -2,7 +2,7 @@ import { get } from "http";
 import { CronJob } from "cron";
 
 const pingGoogle = () => {
-  get("http://www.google.com", (res) => {
+  get("https://akm-api.vviia.repl.co/api/v1/", (res) => {
     console.log(`Ping successful at ${new Date()}`);
   }).on("error", (err) => {
     console.log(`Ping failed with error: ${err}`);
@@ -10,7 +10,7 @@ const pingGoogle = () => {
 };
 
 // Create a new cron job that runs the pingGoogle function every 3 minutes
-const pingJob = new cron.CronJob("*/4 */30 * * *", pingGoogle);
+const pingJob = new CronJob("*/5 * * * * *", pingGoogle);
 
 // Start the cron job
 pingJob.start();
