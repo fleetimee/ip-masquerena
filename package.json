@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "cron": "^2.3.0"
+  },
+  "type": "module"
+}
